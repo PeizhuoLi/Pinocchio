@@ -1,7 +1,7 @@
 # Makefile for DemoUI
 CC = g++
 CCFLAGS = -c -Wall -O3 -I../Pinocchio/
-LIBS = -lm -L../Pinocchio/ -lpinocchio -lfltk -lfltk_gl
+LIBS = -L../Pinocchio/ -lpinocchio -I/usr/local/include -I/usr/include/freetype2 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT /usr/local/lib/libfltk_gl.a -lGLU -lGL /usr/local/lib/libfltk.a -lXrender -lXcursor -lXfixes -lXext -lXft -lfontconfig -lXinerama -lpthread -ldl -lm -lX11
 
 OBJECTS = demoUI.o MyWindow.o defmesh.o processor.o motion.o filter.o
 
